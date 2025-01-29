@@ -7,7 +7,7 @@ my_first_boolean = True
 def addSpace():
     print("\n")
 
-###### Formatting and math symbols ######
+###### Formatting and math symbols as conditions ######
 addSpace()
 print("Adding diffrent types of variables: " + f"{my_first_int + my_first_float}" + my_first_string + f" {my_first_boolean}")
 addSpace()
@@ -200,11 +200,231 @@ shopping_list.append("apple juice")
 items_taken = len(shopping_list)
 verifyIfWeCanShop(items_taken)
 
+##### Conditions #####
+### Boolean operators:
+## Using AND condition
+addSpace()
+if name == "Alicja" and age == 30:
+    print("Your name is %s, and you are also %d years old." % (name, age))
+else:
+    print("You are not a person that you claim to be!")
+
+## Using OR condition 
+addSpace()
+if name == "Ala" or name == "Alicja":
+    print("Your name is correct")
+else:
+    print("You are not a person that you claim to be!")
+
+### The "in" operator
+addSpace()
+item = "tomatoes"
+if item in shopping_list:
+    print("We are buying tomatoes today")
+
+addSpace()
+statement = False
+another_statement = True
+
+### The "is" operator
+if statement is True:
+    print("Buy tomatoes")
+    pass
+elif another_statement is False: # else if
+    pass # The pass in each block doesn't contribute to the program's behavior. It just indicates that "nothing happens here."
+else:
+    print("No need to buy anything")
+
+# Unlike the double equals operator "==", 
+# the "is" operator does not match the values of the variables, but the instances themselves. For example:
+addSpace()    
+x = [1,2,3]
+y = [1,2,3]
+print(x == y) # Prints out True
+print(x is y) # Prints out False
+
+### The "not" operator
+# Using "not" before a boolean expression inverts it:
+addSpace()    
+print(not False) # Prints out True
+print((not False) == (False)) # Prints out False
+
+# change this code
+addSpace()   
+print("Task - Change the variables in the first section, so that each if statement resolves as True:") 
+number = 16
+second_number = 0
+first_array = [1,2,3]
+second_array = [1,2]
+
+if number > 15:
+    print("1")
+
+if first_array:
+    print("2")
+
+if len(second_array) == 2:
+    print("3")
+
+if len(first_array) + len(second_array) == 5:
+    print("4")
+
+if first_array and first_array[0] == 1:
+    print("5")
+
+if not second_number:
+    print("6")
+
 ###### Loops ######
 addSpace()
+# The "for" loop
 print("Shopping items in the 'for loop' - iteration: ")
 for item in shopping_list:
     print(item)
+addSpace()
+
+# For loops can iterate over a sequence of numbers using the "range" and "xrange" functions. 
+# The difference between range and xrange is that the range function returns a new list with numbers of that 
+# specified range, whereas xrange returns an iterator, which is more efficient. 
+# (Python 3 uses the range function, which acts like xrange). Note that the range function is zero based.
+
+# Prints out the numbers 0,1,2,3,4
+for x in range(5):
+    print(x)
+addSpace()
+# Prints out 3,4,5
+for x in range(3, 6):
+    print(x)
+addSpace()
+# Prints out 3,5,7
+for x in range(3, 8, 2):
+    print(x)
+addSpace()
+
+# Generates a list of numbers from 0 to 9
+numbers = range(10)
+print(numbers)  # Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Generates a range object (like an iterator)
+numbers = range(10)
+addSpace()
+for num in numbers:
+    print(num)  # Outputs numbers from 0 to 9, one at a time
+
+### "while" loops
+# While loops repeat as long as a certain boolean condition is met. For example:
+# Prints out 0,1,2,3,4
+addSpace()
+count = 0
+while count > -5:
+    print(count)
+    count -= 1  
 
 
+addSpace()
+count = 0
+while count > -5:
+    print(count)
+    count = count - 1  # count -= 1 (same thing)
 
+
+addSpace()
+count = 0
+while count < 5:
+    print(count)
+    count += 1  
+
+
+addSpace()
+count = 0
+while count < 5:
+    print(count)
+    count = count + 1  # count += 1 (same thing)
+
+### "break" and "continue" statements
+# break is used to exit a for loop or a while loop, whereas continue is used to skip the current block, 
+# and return to the "for" or "while" statement. A few examples:
+
+# Prints out 0,1,2,3,4
+addSpace()
+count = 0
+while True:
+    print(count)
+    count += 1
+    if count >= 5:
+        break
+
+# Prints out only odd numbers - 1,3,5,7,9
+addSpace()
+for x in range(10): # The for loop iterates over numbers from 0 to 9 (because range(10) generates numbers from 0 to 9).
+    
+    if x % 2 == 0:  # The condition if x % 2 == 0: checks whether x is even. 
+                    # % (modulus operator) returns the remainder when dividing x by 2.
+                    # If x % 2 == 0, it means x is divisible by 2, so it is even.
+        continue    # If x is even, the continue statement is executed.
+                    # continue skips the rest of the loop body and moves to the next iteration.
+                    # This means print(x) will not be executed for even numbers.
+
+    print(x)        # If x is odd, the if condition is false, so continue is skipped.
+                    # The print(x) statement runs, displaying the odd number.
+
+
+### Else clause
+#  When the loop condition of "for" or "while" statement fails then code part in "else" is executed. 
+# If a break statement is executed inside the for loop then the "else" part is skipped. 
+# Note that the "else" part is executed even if there is a continue statement.
+addSpace()
+count=0
+while(count<5):
+    print(count)
+    count +=1
+else:
+    print("count value reached %d" %(count))
+
+# Prints out 1,2,3,4
+for i in range(1, 10):
+    if(i%5==0):
+        break
+    print(i)
+else:
+    print("this is not printed because for loop is terminated because of break but not due to fail in condition")
+
+
+numbers = [
+    951, 402, 984, 651, 360, 69, 408, 319, 601, 485, 980, 507, 725, 547, 544,
+    615, 83, 165, 141, 501, 263, 617, 865, 575, 219, 390, 984, 592, 236, 105, 942, 941,
+    386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345,
+    399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217,
+    815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717,
+    958, 609, 842, 451, 688, 753, 854, 685, 93, 857, 440, 380, 126, 721, 328, 753, 470,
+    743, 527
+    ]
+
+# Loop through and print out all even numbers from the numbers list in the same order they are received. 
+# Don't print any numbers that come after 237 in the sequence.
+addSpace()
+# your code goes here
+for number in numbers:
+    if number == 237:
+        break
+
+    if number % 2 == 1:
+        continue
+
+    print(number)
+
+#### Functions ####
+
+def my_function():
+    print("Hello From My Function!")
+
+def my_function_with_args(username, greeting):
+    print("Hello, %s, From My Function!, I wish you %s"%(username, greeting))
+
+# print(a simple greeting)
+addSpace()
+my_function()
+
+#prints - "Hello, John Doe, From My Function!, I wish you a great year!"
+addSpace()
+my_function_with_args("Alicja Python", "a great year!")
