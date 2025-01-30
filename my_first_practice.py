@@ -428,3 +428,32 @@ my_function()
 #prints - "Hello, John Doe, From My Function!, I wish you a great year!"
 addSpace()
 my_function_with_args("Alicja Python", "a great year!")
+
+#### Dictionaries ####
+
+books = {
+
+    "Anna Karenina":"Leo Tolstoy",
+    "Madame Bovary":"Gustave Flaubert",
+    "War and Peace":"Leo Tolstoy",
+    "Adventures of Huckleberry Finn":"Mark Twain"
+}
+
+books ["The Stories of Anton Chekhov"] =  "Anton Chekhov"
+addSpace()
+print(books)
+
+
+def list_the_books():
+    addSpace()
+    print("Those are the books I read: ")
+    for book_title, author in books.items():
+        print(f"{book_title} by the author {author}")
+
+list_the_books()
+
+books.pop("Anna Karenina")
+addSpace()
+print(books)
+
+
