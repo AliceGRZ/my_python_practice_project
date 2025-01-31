@@ -7,7 +7,7 @@ my_first_boolean = True
 def addSpace():
     print("\n")
 
-###### Formatting and math symbols as conditions ######
+###### Formatting and Comparison Operators ######
 addSpace()
 print("Adding diffrent types of variables: " + f"{my_first_int + my_first_float}" + my_first_string + f" {my_first_boolean}")
 addSpace()
@@ -129,10 +129,14 @@ addSpace()
 print("hello_world.lower() - Make all letters lower case: " + hello_world.lower())
 
 addSpace()
-print("hello_world.startswith('Hello') -\nVerify if variable start with certain character - Does 'Hello world!' starts with 'Hello'?: " + f"{hello_world.startswith('Hello')}")
+print("hello_world.startswith('Hello') -\n \
+      Verify if variable start with certain character - Does 'Hello world!' starts with 'Hello'?: " 
+      + f"{hello_world.startswith('Hello')}")
 
 addSpace()
-print("hello_world.endswith('gibberish')-\nVerify if variable ends with certain character - Does 'Hello world!' ends with 'gibberish'?: " + f"{hello_world.endswith('gibberish')}")
+print("hello_world.endswith('gibberish')-\n \
+      Verify if variable ends with certain character - Does 'Hello world!' ends with 'gibberish'?: " 
+      + f"{hello_world.endswith('gibberish')}")
 
 addSpace()
 split_the_word = hello_world.split(" ")
@@ -182,7 +186,7 @@ shopping_list.remove("mint tea")
 addSpace()
 print("remove('mint tea') - Remove certain variable - mint tea:\n" + f"{shopping_list}")
 
-# Verify the lenght of the list
+# Verify the lenght of the list 
 items_taken = len(shopping_list)
 addSpace()
 def verifyIfWeCanShop(items_taken):
@@ -243,11 +247,11 @@ y = [1,2,3]
 print(x == y) # Prints out True
 print(x is y) # Prints out False
 
-### The "not" operator
+### The "not" logical operator 
 # Using "not" before a boolean expression inverts it:
 addSpace()    
 print(not False) # Prints out True
-print((not False) == (False)) # Prints out False
+print((not False) == (False)) # Prints out False 
 
 # change this code
 addSpace()   
@@ -368,6 +372,9 @@ for x in range(10): # The for loop iterates over numbers from 0 to 9 (because ra
     print(x)        # If x is odd, the if condition is false, so continue is skipped.
                     # The print(x) statement runs, displaying the odd number.
 
+'''Usually modulo is used for checking if a number is even or odd:
+If a number is even, dividing it by 2 will leave a remainder of 0.
+If a number is odd, dividing it by 2 will leave a remainder of 1.'''
 
 ### Else clause
 #  When the loop condition of "for" or "while" statement fails then code part in "else" is executed. 
@@ -377,9 +384,18 @@ addSpace()
 count=0
 while(count<5):
     print(count)
-    count +=1
+    count +=1 # Arithmetic Shortcut of count = count + 1
 else:
     print("count value reached %d" %(count))
+
+'''
+Operator Shortcuts
++	+=
+-	-=
+*	*=
+/	/=
+%	%= 
+'''
 
 # Prints out 1,2,3,4
 for i in range(1, 10):
