@@ -18,10 +18,20 @@ def fizzbuzz(number):
         result += "Buzz"
     if result == "":
         result = str(number)
+    if result.count("3"):
+        result = "Almost Fizz"
     return result
 
+"""
+Loop over the numbers from 1 to the number that the user entered, 
+and each time use the function you created to calculate the 
+FizzBuzz result and output it.
+"""
+
 limit = int(input())
-print(fizzbuzz(limit))
+# Play FizzBuzz
+for i in range(1, limit + 1):
+    print(fizzbuzz(i))
 
 
 """
