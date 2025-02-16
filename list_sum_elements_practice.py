@@ -7,3 +7,6 @@ def sum_elements(lst):
     for i in range(len(lst)):
         total += lst[i]
     print(total)
+
+
+
