@@ -8,5 +8,7 @@ def sum_elements(lst):
         total += lst[i]
     print(total)
 
+list = [0, 1, 3, 4]
 
+sum_elements(list)
 
