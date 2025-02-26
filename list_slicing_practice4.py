@@ -54,3 +54,17 @@ slice3 = lst[middle::2]
 print(slice1)
 print(slice2)
 print(slice3)
+
+
+"""
+Create a program that receives a list as input and prints four new lists based on the following slicing operations:
+A list containing every fourth element, starting from index 2
+A list containing all elements from the 3rd element to the 3rd to last element
+A list containing every element in reverse order, skipping every other element
+A list containing the first three and last three elements of the original list
+"""
+original_list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+print(f"List 1: {original_list[2::4]}")
+print(f"List 2: {original_list[2:-2]}")
+print(f"List 3: {original_list[::-2]}")
+print(f"List 4: {original_list[:3:] + original_list[-3::]}")

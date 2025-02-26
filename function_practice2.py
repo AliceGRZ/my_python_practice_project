@@ -4,7 +4,7 @@
 def hello_function():
     print("Hello Function!")
 
-n = int(input())
+n = 5
 # Write your code below
 
 

@@ -19,3 +19,4 @@ def list_all_the_numbers_from_the_list_3(lst):
 list_all_the_numbers_from_the_list(my_lst)
 list_all_the_numbers_from_the_list_2(my_lst)
 print(list_all_the_numbers_from_the_list_3(my_lst))
+print(my_lst)

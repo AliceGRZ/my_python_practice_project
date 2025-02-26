@@ -8,8 +8,8 @@ Then, in a separate loop, find and print the first number divisible by 7
 """
 
 
-num1 = int(input())
-num2 = int(input())
+num1 = 1
+num2 = 200
 
 for num in range(num1, num2):
     if num > 5 and num % 2 == 0:

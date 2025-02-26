@@ -23,7 +23,7 @@ Output: ScrPs13
 
 for i in range(len(password)):
     if i % 2 == 0:
-        print(password[i], end='')
+        print(password[i], end ='')
 
 print("\n")
 """

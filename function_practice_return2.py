@@ -7,6 +7,6 @@ Finally, print the value of result.
 def cube_number(n):
     return n ** 3
 
-input_num = int(input())
+input_num = 3
 result = cube_number(input_num)
 print(result)

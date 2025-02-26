@@ -116,7 +116,8 @@ addSpace()
 print("hello_world.count('l') - Verify how many characters are in certain variable (Hello world! - letter 'l'): " + f"{hello_world.count('l')}")
 
 addSpace()
-print("hello_world[3:7] - Slice operation. Extracts a portion of the string based on the specified range of indices,\n(starts from index 3, ends before 7): " + f"{hello_world[3:7]}")
+print("hello_world[3:7] - Slice operation. Extracts a portion of the string based on the specified range of indices," +
+      "\n(starts from index 3, ends before 7): " + f"{hello_world[3:7]}")
 # Negative indices count from the end of the string. For example, hello_world[-1] is '!'.
 
 addSpace()

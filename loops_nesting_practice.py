@@ -7,7 +7,7 @@ Numbers can also be paired with themselves if their sum equals n.
 For example if n = 6, the output should be:
 """
 
-n = int(input())
+n = 8
 # Write your code below
 for i in range(1, n):
     for j in range(1, n):
@@ -20,7 +20,7 @@ The program should show all possible combinations, including duplicate pairs in 
 or example, both "1 6" and "6 1" should be shown, as they are considered different arrangements of the same pair. 
 Numbers can also be paired with themselves if their product equals n.
 """
-n = int(input())
+n = 9
 # Write your code below
 for i in range(1, n+1):
     for j in range(1, n+1):

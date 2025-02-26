@@ -11,6 +11,7 @@ def prod(lst):
         total *= lst[i]
     return print(total)
 
+prod(my_lst)
 
 
 

@@ -7,7 +7,7 @@ Finally, print the value of result.
 def square_number(n):
     return n ** 2
 
-number = int(input())
+number = 4
 
 result = square_number(number)
 print(result)

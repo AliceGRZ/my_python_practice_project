@@ -13,10 +13,15 @@ def reverse_1(lst):
     for i in range(n - 1, -1, -1):  # Loop from last index to first
         reverse_list.append(lst[i])  # Append elements in reverse order
     
-    return reverse_list
+    return print(reverse_list)
 
 def reverse_2(lst):
     res = []
     for i in range(len(lst)):
         res.append(lst[len(lst) - i - 1])
-    return res
+    return print(res)
+
+list = [1,2,3,4,5,6,7,8,9,10]
+
+reverse_1(list)
+reverse_2(list)
